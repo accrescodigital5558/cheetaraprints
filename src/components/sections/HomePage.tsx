@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CalendarRange, MapPinned, Monitor, UserRound } from "lucide-react";
 import { Pill } from "@/components/ui/Pill";
 import { Reveal } from "@/components/ui/Reveal";
 import { FaqList } from "@/components/ui/FaqList";
@@ -12,21 +13,23 @@ const heroLines = [
     { text: "Your", accent: false },
     { text: "Printers.", accent: false },
     { text: "Working", accent: false },
-    { text: "Smarter.", accent: true },
   ],
   [
+    { text: "Smarter.", accent: true },
     { text: "Your", accent: false },
     { text: "Business", accent: false },
+  ],
+  [
     { text: "Running", accent: false },
     { text: "Better.", accent: true },
   ],
 ];
 
 const facts = [
-  ["Nationwide", "United States service"],
-  ["Remote", "Management only"],
-  ["Annual", "One invoice each year"],
-  ["Named", "A service owner"],
+  { label: "Nationwide", value: "United States service", icon: MapPinned },
+  { label: "Remote", value: "Management only", icon: Monitor },
+  { label: "Annual", value: "One invoice each year", icon: CalendarRange },
+  { label: "Named", value: "A service owner", icon: UserRound },
 ];
 
 const agreement = [
@@ -55,7 +58,7 @@ const terms = [
 export function HomePage() {
   return (
     <>
-      <section className="relative min-h-[100svh] bg-navy text-white">
+      <section className="relative min-h-[100svh] overflow-hidden bg-navy text-white">
         <Image
           src="/images/printer-detail.jpg"
           alt="Commercial printer on an office work surface"
@@ -64,16 +67,20 @@ export function HomePage() {
           sizes="100vw"
           className="object-cover object-[70%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-transparent" />
-        <div className="relative mx-auto flex min-h-[100svh] max-w-[1180px] flex-col justify-end px-5 pb-36 pt-40">
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/75">Nationwide remote managed print</p>
-          <h1 className="mt-5 max-w-[920px] text-[40px] leading-[0.98] tracking-[-0.045em] text-white sm:text-[48px] lg:text-[56px]">
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/75 via-navy/35 to-navy/10" />
+        <div className="hero-cover pointer-events-none absolute inset-0 z-[2] bg-navy" aria-hidden="true" />
+        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1180px] flex-col justify-end px-4 pb-16 pt-36 sm:px-5 sm:pb-20 sm:pt-40 lg:pb-36">
+          <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white/75 sm:text-[11px] sm:tracking-[0.2em]">
+            <span className="size-1.5 shrink-0 rotate-45 bg-green" aria-hidden="true" />
+            Nationwide remote managed print
+          </p>
+          <h1 className="mt-4 max-w-full text-[clamp(1.75rem,4.5vw,4.15rem)] leading-[0.94] tracking-[-0.045em] text-white">
             {heroLines.map((line, lineIndex) => (
-              <span key={lineIndex} className="block">
+              <span key={lineIndex} className="block sm:whitespace-nowrap">
                 {line.map((word, index) => {
                   const order = lineIndex * line.length + index;
                   return (
-                    <span key={word.text} className="mr-[0.24em] inline-block overflow-hidden pb-[0.08em] align-bottom">
+                    <span key={word.text} className="mr-[0.22em] inline-block overflow-hidden pb-[0.08em] align-bottom">
                       <span className="word-up inline-block" style={{ animationDelay: `${420 + order * 55}ms` }}>
                         <span className={word.accent ? "text-green" : undefined}>{word.text}</span>
                       </span>
@@ -83,10 +90,10 @@ export function HomePage() {
               </span>
             ))}
           </h1>
-          <p className="fade-up mt-6 max-w-xl text-[17px] leading-7 text-white/80" style={{ animationDelay: "900ms" }}>
+          <p className="fade-up mt-5 max-w-[34rem] text-[15px] leading-6 text-white/80 sm:mt-6 sm:text-[17px] sm:leading-7" style={{ animationDelay: "900ms" }}>
             Cheetara Prints helps businesses manage their printing environments through remote fleet oversight, proactive support, and predictable annual agreements.
           </p>
-          <div className="fade-up mt-8 flex flex-wrap gap-3" style={{ animationDelay: "1040ms" }}>
+          <div className="fade-up mt-7 flex flex-col items-start gap-3 min-[420px]:flex-row min-[420px]:flex-wrap sm:mt-8" style={{ animationDelay: "1040ms" }}>
             <Pill href="/request-assessment" tone="onDark" event="quote_cta_click" eventParams={{ location: "hero" }}>
               Get an Annual Quote
             </Pill>
@@ -97,18 +104,25 @@ export function HomePage() {
         </div>
       </section>
 
-      <div className="relative z-10 mx-auto -mt-16 max-w-[1180px] px-5">
-        <dl className="grid overflow-hidden rounded-[26px] border border-white/10 bg-navy text-white md:grid-cols-4">
-          {facts.map(([label, value]) => (
-            <div key={label} className="border-white/10 px-6 py-6 md:border-l md:first:border-l-0">
-              <dt className="font-mono text-[11px] uppercase tracking-[0.16em] text-green">{label}</dt>
-              <dd className="mt-2 font-heading text-2xl tracking-[-0.03em]">{value}</dd>
-            </div>
-          ))}
+      <div className="relative z-10 mx-auto -mt-8 w-full max-w-[1180px] px-4 sm:-mt-12 sm:px-5 lg:-mt-24">
+        <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-[22px] bg-white/10 p-px text-white shadow-[0_18px_50px_rgba(16,36,58,0.28)] min-[560px]:grid-cols-2 xl:grid-cols-4 sm:rounded-[28px]">
+          {facts.map((fact, index) => {
+            const Icon = fact.icon;
+            const featured = index === facts.length - 1;
+            return (
+              <div key={fact.label} className={`flex min-w-0 items-start gap-3 px-4 py-4 sm:px-5 sm:py-5 ${featured ? "bg-[#18324f]" : "bg-navy"}`}>
+                <Icon className="mt-0.5 size-4 shrink-0 text-green" aria-hidden="true" />
+                <div className="min-w-0">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-green sm:text-[11px]">{fact.label}</dt>
+                  <dd className="mt-1 font-heading text-[17px] leading-6 tracking-[-0.03em] sm:text-[20px] sm:leading-7">{fact.value}</dd>
+                </div>
+              </div>
+            );
+          })}
         </dl>
       </div>
 
-      <section className="mx-auto max-w-[1180px] px-5 py-24 lg:py-32">
+      <section className="mx-auto max-w-[1180px] px-4 pb-20 pt-14 sm:px-5 sm:pb-24 sm:pt-16 lg:pb-32 lg:pt-20">
         <Reveal>
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">The fleet</p>
           <h2 className="mt-4 max-w-[14ch] text-[36px] leading-[1.02] tracking-[-0.035em] lg:text-[48px]">Tell us what the fleet is doing.</h2>
