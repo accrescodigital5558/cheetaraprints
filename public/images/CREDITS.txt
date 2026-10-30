@@ -1,0 +1,9 @@
+Photographs are used under the Unsplash License (https://unsplash.com/license).
+They are stored locally so the site does not depend on a remote image host.
+
+- printer-detail.jpg — Unsplash photo-1613395450289-e560907d9308
+- office-work.jpg — Unsplash photo-1497366216548-37526070297c
+- documents.jpg — Unsplash photo-1454165804606-c3d57bc86b40
+- meeting.jpg — Unsplash photo-1497366811353-6870744d04b2
+
+No manufacturer logo is presented as a partnership or endorsement.
