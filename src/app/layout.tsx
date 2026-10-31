@@ -28,7 +28,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Managed Print Services",
+    default: "On-Site and Remote Managed Print",
     template: "%s | Cheetara Prints",
   },
   description: site.description,

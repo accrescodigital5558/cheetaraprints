@@ -161,7 +161,7 @@ export function SiteHeader() {
           <div className="overflow-hidden">
             <div className={`border-b ${solid ? "border-line text-muted" : "border-white/15 text-white/80"}`}>
               <div className="mx-auto flex h-9 max-w-[1180px] items-center justify-between px-5 font-mono text-[10px] uppercase tracking-[0.16em]">
-                <p>Nationwide remote service · One annual invoice</p>
+                <p>On-site and remote service · One annual invoice</p>
                 <Link href={quoteCta.href} className="hidden sm:inline" tabIndex={scrolled ? -1 : undefined}>
                   Request an assessment
                 </Link>

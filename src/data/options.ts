@@ -57,6 +57,13 @@ export const serviceOptions = [
   "Enterprise Print Management",
 ] as const;
 
+export const deliveryNeeds = [
+  "Required",
+  "Useful where the agreement includes it",
+  "Not requested",
+  "Not sure yet",
+] as const;
+
 export const challengeOptions = [
   "Uncontrolled printing expenditure",
   "Unexpected toner shortages",

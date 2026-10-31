@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
   "About",
-  "CHEETARA PRINTS, LLC provides nationwide remote managed print services under annual agreements.",
+  "CHEETARA PRINTS, LLC provides on-site and remote managed print services under annual agreements.",
   "/about",
 );
 
@@ -15,7 +15,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Company"
         title="Your printers. Our responsibility."
-        lede="Cheetara Prints is a remote-first managed print company for businesses in the United States. The work is fleet oversight, not a retail counter."
+        lede="Cheetara Prints provides on-site and remote managed print services. The work is fleet oversight, supplies, and technical support, not a retail counter."
       />
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
       <article className="mx-auto max-w-[800px] space-y-6 px-5 py-16 text-[17px] leading-8 text-muted lg:py-20">
@@ -24,7 +24,7 @@ export default function AboutPage() {
           Businesses already own the printers. What they often lack is a single owner for supplies planning, usage reporting, and the moment a device stops. Cheetara Prints takes that operating work under a 12-month agreement with one annual invoice.
         </p>
         <p>
-          Service is delivered remotely. A response, when one is written into an agreement, is a commitment to begin work. It is not a promise that every fault is repaired on site, and it is not a claim that technicians are stationed nationwide.
+          Service is delivered on site and remotely, as the agreement sets. A response, when one is written into an agreement, is a commitment to begin work. It is not a promise that every fault is repaired on site, and this page does not publish a service territory.
         </p>
         <h2 className="font-heading text-[32px] tracking-[-0.03em] text-ink">Legal entity</h2>
         <p>

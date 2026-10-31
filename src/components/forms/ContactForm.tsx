@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { contactSchema, type ContactInput } from "@/lib/validation/leads";
+import { deliveryNeeds } from "@/data/options";
 import { track } from "@/lib/analytics";
 import { FieldErrorText, Label, controlClass } from "@/components/forms/fields";
 
@@ -22,6 +23,8 @@ export function ContactForm() {
       businessEmail: "",
       businessPhone: "",
       companyName: "",
+      onSiteNeed: undefined,
+      remoteNeed: undefined,
       message: "",
       privacyConsent: false,
       faxNumber: "",
@@ -111,6 +114,28 @@ export function ContactForm() {
         <FieldErrorText error={errors.companyName} />
       </div>
       <div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <Label htmlFor="contact-onsite">On-site service</Label>
+            <select id="contact-onsite" className={controlClass} defaultValue="" {...form.register("onSiteNeed")}>
+              <option value="" disabled>Select</option>
+              {deliveryNeeds.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+            <FieldErrorText error={errors.onSiteNeed} />
+          </div>
+          <div>
+            <Label htmlFor="contact-remote">Remote support</Label>
+            <select id="contact-remote" className={controlClass} defaultValue="" {...form.register("remoteNeed")}>
+              <option value="" disabled>Select</option>
+              {deliveryNeeds.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+            <FieldErrorText error={errors.remoteNeed} />
+          </div>
+        </div>
         <Label htmlFor="contact-message">Message</Label>
         <textarea id="contact-message" rows={5} className={controlClass} {...form.register("message")} />
         <FieldErrorText error={errors.message} />

@@ -55,7 +55,7 @@ export function IndustryView({ industry }: { industry: IndustryPage }) {
       </section>
       <section className="bg-paper">
         <div className="mx-auto grid max-w-[1180px] gap-6 px-5 py-16 lg:grid-cols-[0.8fr_1.2fr] lg:py-24">
-          <h2 className="text-[32px] tracking-[-0.035em] lg:text-[40px]">Remote support</h2>
+          <h2 className="text-[32px] tracking-[-0.035em] lg:text-[40px]">Remote and on-site support</h2>
           <div className="space-y-4 text-[17px] leading-7 text-muted">
             {industry.remote.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

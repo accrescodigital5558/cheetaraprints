@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { assessmentSchema, type AssessmentInput } from "@/lib/validation/leads";
-import { challengeOptions, companySizes, industries, officeLocationOptions, printerBrands, printerCounts, serviceOptions } from "@/data/options";
+import { challengeOptions, companySizes, deliveryNeeds, industries, officeLocationOptions, printerBrands, printerCounts, serviceOptions } from "@/data/options";
 import { site } from "@/config/site";
 import { track } from "@/lib/analytics";
 import { FieldErrorText, Label, controlClass } from "@/components/forms/fields";
@@ -53,6 +53,8 @@ export function AssessmentForm() {
       printerBrands: [],
       requestedServices: service ? [service] : [],
       challenges: challenge ? [challenge] : [],
+      onSiteNeed: undefined,
+      remoteNeed: undefined,
       additionalInformation: "",
       privacyConsent: false,
       faxNumber: "",
@@ -182,13 +184,15 @@ export function AssessmentForm() {
         <Select name="companySize" label="Company size" options={companySizes} form={form} />
         <Select name="officeLocations" label="Office locations" options={officeLocationOptions} form={form} />
         <Select name="printerCount" label="Printer count" options={printerCounts} form={form} />
+        <Select name="onSiteNeed" label="On-site service" options={deliveryNeeds} form={form} />
+        <Select name="remoteNeed" label="Remote support" options={deliveryNeeds} form={form} />
       </div>
       <CheckGroup name="printerBrands" label="Printer brands" hint="Optional. These are devices you already own, not partnerships." options={printerBrands} form={form} />
       <CheckGroup name="requestedServices" label="Services required" options={serviceOptions} form={form} />
       <CheckGroup name="challenges" label="Current challenges" hint="Optional." options={challengeOptions} form={form} />
       <div>
         <Label htmlFor="additionalInformation">Additional information</Label>
-        <textarea id="additionalInformation" rows={5} className={controlClass} {...form.register("additionalInformation")} />
+        <textarea id="additionalInformation" rows={5} className={controlClass} placeholder="Models you know, and any operational detail that should shape the agreement." {...form.register("additionalInformation")} />
         <FieldErrorText error={errors.additionalInformation} />
       </div>
       <div>
@@ -219,7 +223,7 @@ function Select({
   options,
   form,
 }: {
-  name: "industry" | "companySize" | "officeLocations" | "printerCount";
+  name: "industry" | "companySize" | "officeLocations" | "printerCount" | "onSiteNeed" | "remoteNeed";
   label: string;
   options: readonly string[];
   form: ReturnType<typeof useForm<AssessmentInput>>;

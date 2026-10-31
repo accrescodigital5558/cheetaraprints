@@ -7,7 +7,7 @@ import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export const metadata = pageMetadata(
   "Contact",
-  "Contact CHEETARA PRINTS, LLC about remote managed print services and annual agreements.",
+  "Contact CHEETARA PRINTS, LLC about on-site and remote managed print services and annual agreements.",
   "/contact",
 );
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
       <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
       <div className="mx-auto grid max-w-[1180px] gap-12 px-5 py-16 lg:grid-cols-[0.7fr_1.1fr] lg:py-20">
         <aside className="text-[16px] leading-7 text-muted">
-          <p>Service coverage is the United States, delivered remotely.</p>
+          <p>Service is on-site and remote. The locations a visit can cover are named in the agreement, not published as a territory on this page.</p>
           {site.email ? (
             <p className="mt-4">
               <TrackedLink href={`mailto:${site.email}`} event="email_click" external className="text-ink underline decoration-green underline-offset-4">

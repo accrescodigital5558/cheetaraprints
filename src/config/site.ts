@@ -4,7 +4,7 @@ export const site = {
   domain: "cheetaraprints.com",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://cheetaraprints.com",
   description:
-    "Nationwide remote managed print services for U.S. businesses. One annual payment covers a full year of fleet oversight, support, and a customized agreement.",
+    "On-site and remote managed print services for businesses. One annual payment covers a full year of fleet oversight, support, and a customized agreement.",
   positioning: "Your Printers. Our Responsibility.",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "",

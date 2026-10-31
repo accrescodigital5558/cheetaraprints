@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
   "Resources",
-  "Guides on managed print services, fleet management, remote monitoring, and annual agreements.",
+  "Guides on managed print services, fleet management, remote monitoring, on-site scope, and annual agreements.",
   "/resources",
 );
 

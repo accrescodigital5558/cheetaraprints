@@ -4,10 +4,10 @@ import { Pill } from "@/components/ui/Pill";
 import { pageMetadata } from "@/lib/seo";
 
 const steps = [
-  ["01", "Assess", "We review the printers you already have: locations, how usage can be read, and which problems are actually remote. Devices that cannot be monitored are marked as reported, not presented as live."],
-  ["02", "Customize", "The agreement names the fleet, the services, any supply fulfillment, the support hours, and the annual price. Nothing on the website is a substitute for that document."],
-  ["03", "Implement", "Supported remote administration and any agreed monitoring are configured with the access your team grants. There is no automatic discovery product in this release."],
-  ["04", "Manage", "Oversight, reporting, and remote support continue for the 12-month term. The invoice is issued once. Renewal is a new count of the fleet, not an automatic monthly charge."],
+  ["01", "Assess", "We review the printer fleet, the business locations, and the operational challenges. Devices that cannot be monitored are marked as reported, not presented as live."],
+  ["02", "Define", "The agreement names the fleet, the on-site and remote scope, any supply fulfillment, the support hours, and the annual price. Nothing on the website is a substitute for that document."],
+  ["03", "Implement", "Agreed on-site setup and remote administration are coordinated with the access your team grants. There is no automatic discovery product in this release."],
+  ["04", "Manage", "Fleet oversight, reporting, and the support named in the agreement continue for the 12-month term. The invoice is issued once. Renewal is a new count of the fleet, not an automatic monthly charge."],
 ];
 
 export const metadata = pageMetadata(

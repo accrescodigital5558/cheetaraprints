@@ -25,7 +25,7 @@ export const industries: IndustryPage[] = [
     meta: "Shared floor devices",
     seoTitle: "Managed Print for Corporate Offices",
     seoDescription:
-      "Remote managed print for corporate offices: department queues, shared devices, and one annual agreement across the floors you already run.",
+      "Managed print for corporate offices: shared devices, department queues, and on-site or remote support as the annual agreement sets.",
     lede: "Corporate floors depend on shared devices for contracts, board books, HR packets, and the ordinary jobs that move between departments.",
     image: "/images/meeting.jpg",
     imageAlt: "Conference room in a commercial office",
@@ -63,7 +63,7 @@ export const industries: IndustryPage[] = [
     ],
     remote: [
       "Remote support covers drivers, queues, addressing, and configuration for the devices in the agreement.",
-      "A fault that needs a part replaced at the machine is physical repair. That work is included only when the agreement says so. The service does not place a technician in the building as a standing arrangement.",
+      "Remote support covers queues, drivers, and readings where the device allows them. On-site assessment, installation, and physical repair are scheduled for the floors the agreement names. A standing technician in the building is not assumed.",
     ],
     agreement: [
       {
@@ -84,11 +84,11 @@ export const industries: IndustryPage[] = [
     slug: "healthcare",
     title: "Healthcare & Medical Records",
     href: "/industries/healthcare",
-    summary: "Reception, clinical, and records devices under one remote agreement.",
+    summary: "Reception, clinical, and records devices under one annual agreement.",
     meta: "Clinics and records rooms",
     seoTitle: "Managed Print for Healthcare Offices",
     seoDescription:
-      "Remote managed print for clinics and records offices. Device placement and job release are written in the agreement. This page is not a compliance certificate.",
+      "Managed print for clinics and records offices. Device placement, visits, and job release are written in the agreement. This page is not a compliance certificate.",
     lede: "A clinic or records office prints in more than one place: the front desk, a nursing station, and the room where charts and referrals are assembled.",
     image: "/images/documents.jpg",
     imageAlt: "People reviewing printed plans beside laptops",
@@ -126,7 +126,7 @@ export const industries: IndustryPage[] = [
     ],
     remote: [
       "Remote assistance covers drivers, connectivity, queues, and configuration during the hours written in the agreement.",
-      "Cheetara Prints does not station a technician in the clinic. A repair that requires someone at the device is identified as physical work and is included only when the agreement names it.",
+      "Remote support covers configuration and availability questions that can be handled from a distance. A visit to a clinic or records room is included only when the agreement names it. This page does not claim HIPAA compliance or a technician stationed in the building.",
     ],
     agreement: [
       {
@@ -147,17 +147,17 @@ export const industries: IndustryPage[] = [
     slug: "education",
     title: "Education & Campuses",
     href: "/industries/education",
-    summary: "Staff, library, and department printers managed remotely across buildings.",
-    meta: "Remote across buildings",
+    summary: "Staff, library, and department printers across buildings, with on-site visits only where the agreement names them.",
+    meta: "Staff and department devices",
     seoTitle: "Managed Print for Education",
     seoDescription:
-      "Remote managed print for schools and campuses: staff, library, and department devices on one annual agreement, without a roaming on-site technician.",
+      "Managed print for schools and campuses: staff, library, and department devices on one annual agreement. On-site visits cover only the buildings the agreement names.",
     lede: "Schools and colleges print in offices, libraries, and department workrooms, and the busy weeks cluster around registration, exams, and the start of a term.",
     image: "/images/office-work.jpg",
     imageAlt: "Modern office corridor with glass meeting rooms",
     help: [
-      "An education agreement can include more than one building. Cheetara Prints manages those devices remotely: inventory, queues, usage, and a named owner for the account.",
-      "The standard service does not include a technician who walks the campus. If a device needs hands-on repair, that visit exists only when the agreement names it.",
+      "An education agreement can include more than one building. Cheetara Prints keeps the inventory, queues, usage, and a named owner. Remote readings are used where the devices allow them.",
+      "Remote support can cover queues and readings across buildings when the devices allow it. A campus walk-through or a hands-on repair is scheduled only for the buildings named in the agreement.",
     ],
     challenges: [
       {
@@ -189,7 +189,7 @@ export const industries: IndustryPage[] = [
     ],
     remote: [
       "Remote support diagnoses drivers, queues, and connectivity for devices in the agreement, from whichever building they are in.",
-      "Distance between buildings does not create an on-site route. A part that has to be replaced at the machine is physical repair, and it is scheduled only if the agreement includes that work.",
+      "A part that has to be replaced at the machine is physical repair. It is scheduled only for the buildings the agreement includes. Coverage of every campus location is not claimed here.",
     ],
     agreement: [
       {
@@ -214,7 +214,7 @@ export const industries: IndustryPage[] = [
     meta: "Firms and practice groups",
     seoTitle: "Managed Print for Legal and Professional Services",
     seoDescription:
-      "Remote managed print for law and professional firms. The agreement names an owner and a usage method. It does not certify confidentiality.",
+      "Managed print for law and professional firms. The agreement names an owner, the delivery method, and a usage method. It does not certify confidentiality.",
     lede: "Firms print matter files, filings, and correspondence, often in a rush before a deadline, and often on a device shared by more than one practice group.",
     image: "/images/documents.jpg",
     imageAlt: "People reviewing printed plans beside laptops",
@@ -252,7 +252,7 @@ export const industries: IndustryPage[] = [
     ],
     remote: [
       "Remote support covers drivers, queues, connectivity, and configuration for the devices named in the agreement.",
-      "Cheetara Prints does not offer a confidentiality certificate, and remote support is not a promise that a document left on a device stayed private. Physical repair remains a written exception.",
+      "Cheetara Prints does not offer a confidentiality certificate, and support is not a promise that a document left on a device stayed private. On-site repair is included only when the agreement names it.",
     ],
     agreement: [
       {
@@ -277,12 +277,12 @@ export const industries: IndustryPage[] = [
     meta: "Offices named in the agreement",
     seoTitle: "Managed Print for Government and Finance Offices",
     seoDescription:
-      "Remote managed print for government and finance offices. Coverage is the devices in the annual agreement. This page claims no regulatory certification or approved-vendor status.",
+      "Managed print for government and finance offices. Coverage is the devices and locations in the annual agreement. This page claims no regulatory certification or approved-vendor status.",
     lede: "Agencies and finance offices print statements, board books, and public packets from branch counters and from back offices that do not share a supply closet.",
     image: "/images/office-work.jpg",
     imageAlt: "Modern office corridor with glass meeting rooms",
     help: [
-      "The offer is remote management of the printers an office already operates. Cheetara Prints is not described here as an approved vendor, and this page does not claim a regulatory certification.",
+      "The offer is management of the printers an office already operates, remotely and on site as the agreement sets. Cheetara Prints is not described here as an approved vendor, and this page does not claim a regulatory certification.",
       "Who may see a usage report, and which offices are in scope, is stated in the agreement. Offices that are not listed are not covered by implication.",
     ],
     challenges: [
@@ -315,7 +315,7 @@ export const industries: IndustryPage[] = [
     ],
     remote: [
       "Remote support handles drivers, connectivity, queues, and configuration for devices in the agreement, during the hours the agreement names.",
-      "An on-site visit or a physical repair is not the default. Either one appears only as a term in the agreement. No response-time number is published here.",
+      "Remote oversight covers status and configuration where the devices allow it. An on-site visit or a physical repair appears only as a term in the agreement. No response-time number is published here.",
     ],
     agreement: [
       {
@@ -340,13 +340,13 @@ export const industries: IndustryPage[] = [
     meta: "Named sites, written hours",
     seoTitle: "Managed Print for Retail and Hospitality",
     seoDescription:
-      "Remote managed print for retail and hospitality back offices and front desks. Support follows the hours in the annual agreement and is not an on-site or all-hours crew.",
+      "Managed print for retail and hospitality back offices and front desks. Support follows the hours in the annual agreement. On-site visits and all-hours coverage are not assumed.",
     lede: "Stores and properties print away from the sales floor: schedules, training packets, and the front-desk jobs that still have to come out of a device in the back.",
     image: "/images/printer-detail.jpg",
     imageAlt: "Close view of a commercial printer on a work surface",
     help: [
       "One annual agreement can name more than one site. Cheetara Prints keeps the fleet record, plans replenishment, and gives the account a named owner.",
-      "Support is remote and follows the hours written in the agreement. It is not a round-the-clock desk, and it is not a crew that arrives at the store or the property.",
+      "Remote support follows the hours written in the agreement. An on-site visit is arranged only when the agreement includes one. This page does not promise a round-the-clock desk or emergency arrival.",
     ],
     challenges: [
       {

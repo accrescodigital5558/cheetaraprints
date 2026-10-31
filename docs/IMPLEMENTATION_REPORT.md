@@ -152,9 +152,36 @@ Checked in the dev server at `http://localhost:3000`.
 
 - Desktop viewport at 1440px: the hero headline ends at about 921px, inside a 920px measure, with no horizontal overflow (`documentElement.scrollWidth` 1425). Header coverage is recorded under Header navigation.
 - Phone viewport at 390px: the header stays a solid bar on inner pages. Menu coverage is recorded under Header navigation.
-- Homepage sections present: hero, fact bar, problem picker, four service rows, numbered agreement, annual contract panel, fit statement and four steps, nationwide remote coverage, FAQ, and closing quote band.
+- Homepage sections present: hero, fact bar, problem picker, four service rows, numbered agreement, annual contract panel, fit statement and four steps, on-site and remote coverage, FAQ, and closing quote band.
 - The billing FAQ opens and states that the agreement is 12 months, invoiced once, and is not a monthly subscription.
 - Service, solution, about, how-it-works, resources, guide, contact, and legal routes returned 200.
 - A hydration warning appeared in the browser tool. The diff was `data-cursor-ref` attributes injected by that tool, not a mismatch in the application markup.
 
 The quote form must stay described as unconfigured until the Resend variables are present.
+
+## On-site and remote model
+
+The site now describes Cheetara Prints as on-site and remote managed print. The headline is “Your Printers. Our Responsibility.” Remote Printer Support remains a remote service at `/services/remote-printer-support`.
+
+Routes were updated in place. No new routes were added. The six industry pages, four service pages, three solution pages, about, how it works, contact, the quote form, FAQs, and page metadata were rewritten so they no longer say the company is remote-only.
+
+Forms now ask whether on-site service and remote support are required, useful, not requested, or not yet known. Validation, consent, the honeypot, the timing check, rate limiting, and fail-closed email are unchanged.
+
+Privacy and cookie pages did not describe a remote-only service, so those clauses were left as written. The terms page now says the service is on-site and remote, and that visits and physical repair exist only in a signed agreement. Counsel still needs to review the legal pages.
+
+### Still unconfirmed
+
+- On-site territory, and whether visits are made by employees, contractors, partners, or a mix.
+- Visit availability, response and resolution times, and emergency support.
+- Which repairs, parts, hardware, installation, relocation, and supplies are standard.
+- Supported brands and models, and maintenance conditions beyond “named in the agreement.”
+
+The audit checklist is `docs/BUSINESS_MODEL_AUDIT.md`.
+
+### Checks for this update
+
+- `tsc --noEmit` passed. ESLint on `src` passed with no warnings. `npm run build` completed and generated the existing routes, including the six industry pages.
+- Every public route returned HTTP 200 on the dev server.
+- Homepage headline, agreement list, coverage section, and FAQ match the on-site and remote model. Canonical remains `https://cheetaraprints.com/`.
+- Desktop Services menu opened. At 768px the mobile menu listed the same services, solutions, industries, and company links. The homepage did not overflow at 360px, 390px, or 768px.
+- Empty quote and contact submissions showed field errors, including the new on-site and remote questions. Neither form reported a delivered message.

@@ -18,7 +18,7 @@ export default function TermsPage() {
       <Prose>
         <p>The site is published by {site.legalName}. Counsel should review this page before production publication.</p>
         <h2>The website and the agreement</h2>
-        <p>Pages describe a remote managed print service sold as a 12-month agreement with one annual invoice. A quote request is not an offer that has been accepted, and it does not start service. Scope, price, supplies, support hours, and any physical repair terms exist only in a signed agreement.</p>
+        <p>Pages describe on-site and remote managed print services sold as a 12-month agreement with one annual invoice. A quote request is not an offer that has been accepted, and it does not start service. Scope, price, supplies, support hours, visits, and any physical repair terms exist only in a signed agreement.</p>
         <h2>No monthly plan</h2>
         <p>The standard commercial description is annual billing. Nothing on the site is an offer of a monthly subscription.</p>
         <h2>Accuracy</h2>

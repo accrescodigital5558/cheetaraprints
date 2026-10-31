@@ -2,8 +2,8 @@ import { HomePage } from "@/components/sections/HomePage";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
-  "Managed Print Services",
-  "Cheetara Prints manages business printing across the United States with remote fleet oversight and one annual agreement.",
+  "On-Site and Remote Managed Print",
+  "Cheetara Prints provides on-site and remote managed print services under one annual agreement.",
   "/",
 );
 

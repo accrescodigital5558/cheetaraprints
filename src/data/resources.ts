@@ -27,7 +27,7 @@ export const guides: Guide[] = [
     paragraphs: [
       "Printers multiply quietly. A second office opens, a department orders its own device, and within a year nobody can say how many machines the company runs or which ones are worth keeping.",
       "A usable multi-location model starts with an inventory: site, department, model, and how usage will be collected. Some devices can report meters remotely. Others need a person on site to read a counter. Mixing those two methods without labeling them produces reports that look more precise than they are.",
-      "Remote administration can keep drivers, queues, and supported settings consistent from one office to the next. It cannot replace a part inside a machine in another state. Cheetara Prints is a remote-first service across the United States. Physical repair is included only when a specific agreement says so.",
+      "Remote administration can keep drivers, queues, and supported settings consistent from one office to the next. It cannot replace a part inside a machine. On-site repair, installation, and relocation are included only when the agreement names them. This site does not publish an on-site territory.",
       "The commercial companion to that model is still annual. One invoice can cover a year of oversight for every location named in the scope, with the price set from the fleet rather than from a generic package.",
     ],
   },
@@ -87,7 +87,7 @@ export const guides: Guide[] = [
     paragraphs: [
       "Managed print is a poor fit for a single home printer. It starts to make sense when several devices serve a business and no one can say who is responsible for them.",
       "The practical test Cheetara Prints uses is simple. You have more than a couple of devices, toner shows up as a surprise, and nobody owns the fleet. We count first, then quote an annual figure.",
-      "Other signs are departments buying supplies independently, usage that finance cannot reconstruct, and downtime that waits on whoever is least busy. A remote agreement can take that work on. It should not be sold as a guarantee that a technician will arrive at every office.",
+      "Other signs are departments buying supplies independently, usage that finance cannot reconstruct, and downtime that waits on whoever is least busy. An annual agreement can take that work on. It is not a guarantee that a technician will arrive at every office.",
       "If the need is a one-time repair or a new machine from a retailer, this is the wrong service. Cheetara Prints manages an environment. It does not operate a storefront.",
     ],
   },

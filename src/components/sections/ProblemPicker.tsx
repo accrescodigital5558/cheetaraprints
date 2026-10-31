@@ -19,7 +19,7 @@ const problems = [
   {
     id: "downtime",
     title: "Printer downtime",
-    detail: "Remote support diagnoses drivers, queues, and connectivity. A fault that needs a part replaced on site is identified as physical repair, not treated as if a technician is already on the way.",
+    detail: "Remote support can diagnose drivers, queues, and connectivity. A fault that needs someone at the machine is on-site work, and that visit is included only when the agreement names it.",
   },
   {
     id: "devices",

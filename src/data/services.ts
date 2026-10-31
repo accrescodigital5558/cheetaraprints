@@ -25,7 +25,7 @@ export const services: ServicePage[] = [
     href: "/services/managed-print-services",
     eyebrow: "Primary agreement",
     meta: "12-month operating agreement",
-    summary: "Remote oversight, supply planning, reporting, and a named owner for the printers you already run.",
+    summary: "Fleet oversight, supply planning, reporting, and a named owner, delivered on site and remotely as the agreement sets.",
     image: "/images/printer-detail.jpg",
     imageAlt: "Office printer on a work surface in warm evening light",
     lede: "A managed print program is an operating agreement for the machines your business already uses.",
@@ -39,9 +39,9 @@ export const services: ServicePage[] = [
         ],
       },
       {
-        heading: "Remote fleet management",
+        heading: "Fleet management",
         paragraphs: [
-          "Supported devices are reviewed remotely for status, configuration, and usage. Where a live reading is not available, the agreement uses meters or figures your team supplies.",
+          "Where a device and the network allow it, status, configuration, and usage are reviewed remotely. Where a live reading is not available, the agreement uses meters or figures your team supplies. On-site assessment and hands-on work are added only for the tasks the agreement names.",
           "The assessment separates devices that can be monitored from devices that will be reported on a schedule.",
         ],
       },
@@ -55,7 +55,7 @@ export const services: ServicePage[] = [
         heading: "Break-fix and response windows",
         paragraphs: [
           "Remote assistance follows the hours and response window written in the agreement. A response window is the time to begin work, not a promise that every fault will be resolved in that time.",
-          "Physical repair is not the same as remote support. On-site work is included only when the agreement says so.",
+          "Remote support and on-site work are different. Installation, maintenance, parts, and physical repair are included only when the agreement names them.",
         ],
       },
       {
@@ -87,7 +87,7 @@ export const services: ServicePage[] = [
     ],
     seoTitle: "Managed Print Services",
     seoDescription:
-      "Remote managed print services for U.S. businesses. A 12-month agreement with one annual invoice, fleet oversight, and a named service owner.",
+      "On-site and remote managed print services. A 12-month agreement with one annual invoice, fleet oversight, and a named service owner.",
   },
   {
     slug: "printer-fleet-management",
@@ -117,7 +117,7 @@ export const services: ServicePage[] = [
       {
         heading: "Administration and recommendations",
         paragraphs: [
-          "Remote administration covers the settings the agreement includes. Optimization recommendations are written advice: consolidate, relocate, or retire a device. They are not an automatic change to your network.",
+          "Remote administration covers the settings the agreement includes. A physical inspection or a device move is on-site work and is included only when the agreement names it. Optimization recommendations are written advice, not an automatic change to your network.",
         ],
       },
     ],
@@ -139,7 +139,7 @@ export const services: ServicePage[] = [
     ],
     seoTitle: "Printer Fleet Management",
     seoDescription:
-      "Remote printer fleet management for U.S. businesses: inventory, meters, utilization, and reporting that distinguishes live readings from supplied data.",
+      "Printer fleet management for businesses: inventory, meters, utilization, and reporting that distinguishes live readings from supplied data.",
   },
   {
     slug: "printer-infrastructure-management",
@@ -147,11 +147,11 @@ export const services: ServicePage[] = [
     href: "/services/printer-infrastructure-management",
     eyebrow: "Configuration",
     meta: "Queues, drivers, and connectivity",
-    summary: "Remote administration of the print path: addressing, queues, drivers, and the settings your policy requires.",
+    summary: "Administration of the print path: addressing, queues, drivers, and the settings your policy requires.",
     image: "/images/meeting.jpg",
     imageAlt: "Conference room in a commercial office",
     lede: "Infrastructure management is the work of keeping printers addressable, drivers consistent, and queues understandable.",
-    message: "Cheetara Prints works on the print environment you authorize. Changes are remote. Physical cabling and on-site hardware replacement stay outside remote support unless the agreement says otherwise.",
+    message: "Cheetara Prints works on the print environment you authorize. Queues, drivers, and addressing are often handled remotely. Cabling, hardware replacement, and other hands-on work are included only when the agreement names them.",
     sections: [
       {
         heading: "Configuration in scope",
@@ -186,7 +186,7 @@ export const services: ServicePage[] = [
     ],
     seoTitle: "Printer Infrastructure Management",
     seoDescription:
-      "Remote printer infrastructure management: TCP/IP, queues, drivers, print servers, and secure printing configuration for U.S. businesses.",
+      "Printer infrastructure management: TCP/IP, queues, drivers, print servers, and secure printing configuration, with on-site work only where the agreement includes it.",
   },
   {
     slug: "remote-printer-support",
@@ -204,7 +204,7 @@ export const services: ServicePage[] = [
         heading: "What a remote session covers",
         paragraphs: [
           "Troubleshooting, driver installation assistance, connectivity diagnosis, print queue troubleshooting, and configuration assistance.",
-          "If the fault is outside remote reach, the request is escalated in the way the agreement describes. Escalation can mean a clearer diagnosis and a recommended next step. It does not mean a Cheetara technician is dispatched nationwide.",
+          "If the fault is outside remote reach, the request follows the path in the agreement. That path can be a clearer diagnosis, a recommended next step, or an on-site visit when the agreement includes one. This page does not dispatch a technician by default, and it does not publish a service territory.",
         ],
       },
       {
@@ -216,7 +216,7 @@ export const services: ServicePage[] = [
       {
         heading: "Physical repair",
         paragraphs: [
-          "A roller, a board, or a part that has to be replaced on site is physical repair. Remote support can identify that need. It does not, by itself, put a technician in the office.",
+          "A roller, a board, or a part that has to be replaced at the machine is physical repair. Remote support can identify that need. The visit itself is a separate term in the agreement.",
         ],
       },
     ],

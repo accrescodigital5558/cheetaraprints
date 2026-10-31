@@ -35,7 +35,7 @@ export const solutions: SolutionPage[] = [
       },
       {
         title: "Simplified support",
-        body: "Remote assistance covers the faults that can be diagnosed at a distance. Physical repair stays a separate, written decision.",
+        body: "Remote assistance covers faults that can be diagnosed at a distance. An on-site visit or a physical repair is included only when the agreement names it.",
       },
       {
         title: "Predictable annual costs",
@@ -71,7 +71,7 @@ export const solutions: SolutionPage[] = [
       },
       {
         title: "Consistent configurations",
-        body: "Drivers, queues, and supported settings are administered remotely so a new hire does not inherit a one-off setup.",
+        body: "Drivers, queues, and supported settings can be administered remotely so a new hire does not inherit a one-off setup. Hands-on setup is included only when the agreement names it.",
       },
       {
         title: "Ongoing management",
@@ -95,7 +95,7 @@ export const solutions: SolutionPage[] = [
     points: [
       {
         title: "Multi-location infrastructure",
-        body: "Remote management covers offices across the United States. It does not require a Cheetara technician in each building.",
+        body: "Remote oversight can cover offices that are not visited every month. An on-site visit is scheduled for the sites and tasks the agreement names, not assumed for every building.",
       },
       {
         title: "Fleet-wide reporting",
@@ -116,7 +116,7 @@ export const solutions: SolutionPage[] = [
     ],
     seoTitle: "Enterprise Print Management",
     seoDescription:
-      "Enterprise print management for distributed U.S. offices: centralized reporting, remote oversight, and a customized annual agreement.",
+      "Enterprise print management for distributed offices: centralized reporting, remote oversight, and on-site work where the annual agreement includes it.",
   },
 ];
 

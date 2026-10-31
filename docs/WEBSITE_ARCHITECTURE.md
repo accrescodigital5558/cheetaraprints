@@ -21,19 +21,25 @@
 | Privacy Policy | `/privacy-policy` |
 | Terms of Service | `/terms-of-service` |
 | Cookie Policy | `/cookie-policy` |
+| Corporate Offices | `/industries/corporate-offices` |
+| Healthcare & Medical Records | `/industries/healthcare` |
+| Education & Campuses | `/industries/education` |
+| Legal & Professional Services | `/industries/legal-professional` |
+| Government & Finance | `/industries/government-finance` |
+| Retail & Hospitality | `/industries/retail-hospitality` |
 
 `/resources` exists so the header item is a real destination. Guides are static content in `src/data/resources.ts`.
 
 ## Homepage order
 
-Hero, fact bar, problem picker, service rows, agreement list, annual contract, fit and process, remote coverage, FAQ, closing quote.
+Hero, fact bar, problem picker, service rows, agreement list, annual contract, fit and process, on-site and remote coverage, FAQ, closing quote.
 
 ## Page structures
 
 - Service pages: hero, definition, included scope, capability list, annual model, eligibility, FAQ, quote link. Fleet pages separate live monitoring from reporting based on supplied meters.
 - Solution pages: the segment problem, what the agreement changes, and a quote link. Enterprise copy says “Discuss enterprise requirements.”
-- About: legal entity, remote-first model, positioning. DOS details are marked as supplied and unverified for production.
-- How it works: Assess, Customize, Implement, Manage.
+- About: legal entity, on-site and remote managed print, positioning. DOS details are marked as supplied and unverified for production.
+- How it works: Assess, Define, Implement, Manage. On-site and remote scope are named in the agreement.
 - Contact: short form sharing the assessment API pipeline.
 - Legal: original policies describing forms, Resend, optional analytics, and the absence of unverified compliance badges.
 
@@ -83,3 +89,9 @@ Content width: 1180px inside a 1280px frame. Section padding about 96–128px on
 ## Lead flow
 
 The browser posts to `/api/assessment` or `/api/contact`. The server validates with Zod, rejects honeypot and fast submits, rate-limits by IP in memory, and returns a reference number only when Resend accepts both messages. Missing `RESEND_API_KEY`, `QUOTE_FROM_EMAIL`, or `SALES_NOTIFICATION_EMAIL` returns a configuration error. Development may also write `.data/leads.json`, which is gitignored and is not production storage.
+
+## Service delivery
+
+The public identity is on-site and remote managed print. Remote Printer Support stays a remote service. On-site assessment, installation, maintenance, relocation, parts, and physical repair are described only as terms of the selected agreement. The site does not publish an on-site territory, a response time, or a staffing model.
+
+Quote and contact forms collect company, contact, business type, printer count, locations, brands, requested services, on-site need, remote need, and a free-text note. Delivery stays fail-closed until Resend is configured.

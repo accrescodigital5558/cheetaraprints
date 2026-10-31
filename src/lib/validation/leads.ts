@@ -7,6 +7,7 @@ import {
   printerBrands,
   printerCounts,
   serviceOptions,
+  deliveryNeeds,
 } from "@/data/options";
 
 const phone = z
@@ -29,6 +30,8 @@ export const assessmentSchema = z.object({
   printerBrands: z.array(z.enum(printerBrands)).max(12),
   requestedServices: z.array(z.enum(serviceOptions)).min(1, "Select at least one service."),
   challenges: z.array(z.enum(challengeOptions)).max(12),
+  onSiteNeed: z.enum(deliveryNeeds, { errorMap: () => ({ message: "Select the on-site need." }) }),
+  remoteNeed: z.enum(deliveryNeeds, { errorMap: () => ({ message: "Select the remote support need." }) }),
   additionalInformation: z.string().trim().max(2000),
   privacyConsent: z.boolean().refine((value) => value, { message: "Consent is required before we can receive this request." }),
   faxNumber: z.string().optional(),
@@ -41,6 +44,8 @@ export const contactSchema = z.object({
   businessEmail: z.string().trim().email("Enter a valid business email.").max(160),
   businessPhone: phone,
   companyName: z.string().trim().min(1, "Enter a company name.").max(160),
+  onSiteNeed: z.enum(deliveryNeeds, { errorMap: () => ({ message: "Select the on-site need." }) }),
+  remoteNeed: z.enum(deliveryNeeds, { errorMap: () => ({ message: "Select the remote support need." }) }),
   message: z.string().trim().min(10, "Add a short note about the request.").max(2000),
   privacyConsent: z.boolean().refine((value) => value, { message: "Consent is required before we can receive this message." }),
   faxNumber: z.string().optional(),
