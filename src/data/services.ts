@@ -55,7 +55,7 @@ export const services: ServicePage[] = [
         heading: "Break-fix and response windows",
         paragraphs: [
           "Remote assistance follows the hours and response window written in the agreement. A response window is the time to begin work, not a promise that every fault will be resolved in that time.",
-          "Remote support and on-site work are different. Installation, maintenance, parts, and physical repair are included only when the agreement names them.",
+          "Distance support and on-site work are different. Installation, maintenance, parts, and physical repair are included only when the agreement names them.",
         ],
       },
       {
@@ -66,7 +66,7 @@ export const services: ServicePage[] = [
       },
     ],
     included: [
-      "Remote oversight of the agreed fleet",
+      "Oversight of the agreed fleet",
       "Supply monitoring and replenishment planning",
       "Usage reporting from meters or supplied figures",
       "Remote technical assistance within the written terms",
@@ -87,7 +87,7 @@ export const services: ServicePage[] = [
     ],
     seoTitle: "Managed Print Services",
     seoDescription:
-      "On-site and remote managed print services. A 12-month agreement with one annual invoice, fleet oversight, and a named service owner.",
+      "Managed print services. A 12-month agreement with one annual invoice, fleet oversight, and a named service owner.",
   },
   {
     slug: "printer-fleet-management",
@@ -190,18 +190,18 @@ export const services: ServicePage[] = [
   },
   {
     slug: "remote-printer-support",
-    title: "Remote Printer Support",
+    title: "Printer Support",
     href: "/services/remote-printer-support",
     eyebrow: "Assistance",
-    meta: "Diagnosis without a site visit",
-    summary: "Remote troubleshooting for drivers, connectivity, queues, and configuration, with a clear line between guidance and physical repair.",
+    meta: "Part of managed print",
+    summary: "Troubleshooting for drivers, connectivity, queues, and configuration under the managed print agreement, with a clear line between guidance and physical repair.",
     image: "/images/documents.jpg",
     imageAlt: "People reviewing printed plans beside laptops",
-    lede: "Remote printer support is assistance for problems that can be diagnosed and corrected without opening the machine.",
+    lede: "Printer support under managed print is assistance for problems that can be diagnosed and corrected without opening the machine, plus a path to an on-site visit when the agreement includes one.",
     message: "A named owner coordinates the request. The response window, once management approves one, will be the time to start work. It will not be written as a guarantee that the device is repaired by that time.",
     sections: [
       {
-        heading: "What a remote session covers",
+        heading: "What a support session covers",
         paragraphs: [
           "Troubleshooting, driver installation assistance, connectivity diagnosis, print queue troubleshooting, and configuration assistance.",
           "If the fault is outside remote reach, the request follows the path in the agreement. That path can be a clearer diagnosis, a recommended next step, or an on-site visit when the agreement includes one. This page does not dispatch a technician by default, and it does not publish a service territory.",
@@ -216,7 +216,7 @@ export const services: ServicePage[] = [
       {
         heading: "Physical repair",
         paragraphs: [
-          "A roller, a board, or a part that has to be replaced at the machine is physical repair. Remote support can identify that need. The visit itself is a separate term in the agreement.",
+          "A roller, a board, or a part that has to be replaced at the machine is physical repair. Support from a distance can identify that need. The visit itself is a separate term in the agreement.",
         ],
       },
     ],
@@ -227,7 +227,7 @@ export const services: ServicePage[] = [
       "Print queue troubleshooting",
       "Configuration assistance",
       "Remote escalation within the agreement",
-      "A distinction between remote support and physical repair",
+      "A distinction between distance support and physical repair",
     ],
     faqs: [
       {
@@ -236,9 +236,9 @@ export const services: ServicePage[] = [
           "The public site does not state a response time. Hours and windows are approved by the business and then written into the agreement. Until that approval exists, the quote conversation is the place to set them.",
       },
     ],
-    seoTitle: "Remote Printer Support",
+    seoTitle: "Printer Support",
     seoDescription:
-      "Remote printer support for U.S. businesses: drivers, queues, connectivity, and configuration, kept separate from physical repair.",
+      "Printer support for U.S. businesses under managed print: drivers, queues, connectivity, and configuration, kept separate from physical repair.",
   },
 ];
 

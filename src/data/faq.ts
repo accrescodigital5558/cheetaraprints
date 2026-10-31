@@ -9,7 +9,7 @@ export const faqs: Faq[] = [
   {
     question: "Do you provide on-site and remote printer support?",
     answer:
-      "Yes. Remote support covers problems that can be handled from a distance. On-site work covers assessment, installation, and physical faults when the agreement includes those tasks. The two are scoped separately.",
+      "Managed print includes both, as the agreement sets. Distance support covers problems that can be handled without a visit. On-site work covers assessment, installation, and physical faults when the agreement includes those tasks. The two are scoped separately.",
   },
   {
     question: "What types of on-site services are available?",

@@ -1,6 +1,6 @@
 # Cheetara Prints
 
-Corporate website for CHEETARA PRINTS, LLC. Nationwide remote managed print services, sold as a 12-month agreement with one annual invoice.
+Corporate website for CHEETARA PRINTS, LLC. Managed print services, sold as a 12-month agreement with one annual invoice.
 
 ## Develop
 
@@ -34,4 +34,4 @@ Optional analytics:
 
 ## Notes
 
-The wordmark is a temporary typographic treatment, not an approved trademark. New York Department of State details shown on the About page were supplied for the project and should be verified before production publication.
+New York Department of State details shown on the About page were supplied for the project and should be verified before production publication. Public email and phone are shown only when they look like real contact details (a valid email, and a phone with at least ten digits). Placeholder values such as `123` / `2334` are hidden.

@@ -19,7 +19,7 @@ const problems = [
   {
     id: "downtime",
     title: "Printer downtime",
-    detail: "Remote support can diagnose drivers, queues, and connectivity. A fault that needs someone at the machine is on-site work, and that visit is included only when the agreement names it.",
+    detail: "Managed print support can diagnose drivers, queues, and connectivity from a distance. A fault that needs someone at the machine is on-site work, and that visit is included only when the agreement names it.",
   },
   {
     id: "devices",

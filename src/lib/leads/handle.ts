@@ -50,15 +50,15 @@ export async function handleLead(request: Request, kind: LeadKind) {
     fields["Company size"] = data.companySize;
     fields["Office locations"] = data.officeLocations;
     fields["Printer count"] = data.printerCount;
-    fields["Printer brands"] = data.printerBrands;
+    if (data.printerBrands.length) fields["Printer brands"] = data.printerBrands;
     fields.Services = data.requestedServices;
     fields.Challenges = data.challenges;
     fields["On-site service"] = data.onSiteNeed;
-    fields["Remote support"] = data.remoteNeed;
+    fields["Distance support"] = data.remoteNeed;
     fields.Notes = cleanText(data.additionalInformation, 2000);
   } else {
     fields["On-site service"] = data.onSiteNeed;
-    fields["Remote support"] = data.remoteNeed;
+    fields["Distance support"] = data.remoteNeed;
     fields.Message = cleanText(data.message, 2000);
   }
 

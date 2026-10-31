@@ -52,7 +52,7 @@ export const serviceOptions = [
   "Managed Print Services",
   "Printer Fleet Management",
   "Printer Infrastructure Management",
-  "Remote Printer Support",
+  "Printer Support",
   "Supply Monitoring",
   "Enterprise Print Management",
 ] as const;

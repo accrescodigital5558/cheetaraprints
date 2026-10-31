@@ -11,7 +11,7 @@ export function SiteFooter() {
         <div>
           <Wordmark tone="light" />
           <p className="mt-5 max-w-xs text-[15px] leading-6 text-white/72">
-            On-site and remote managed print. One annual payment. A full year of management.
+            Managed print services. One annual payment. A full year of fleet management.
           </p>
         </div>
         <div>
@@ -38,7 +38,7 @@ export function SiteFooter() {
         <div>
           <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-green">Contact</p>
           <ul className="mt-4 space-y-3 text-[15px] text-white/80">
-            <li>On-site and remote service</li>
+            <li>Managed print for business fleets</li>
             {site.email ? (
               <li>
                 <TrackedLink href={`mailto:${site.email}`} event="email_click" external className="hover:text-white">
@@ -73,6 +73,7 @@ export function SiteFooter() {
             <Link href="/privacy-policy" className="hover:text-white">Privacy</Link>
             <Link href="/terms-of-service" className="hover:text-white">Terms</Link>
             <Link href="/cookie-policy" className="hover:text-white">Cookies</Link>
+            <Link href="/disclaimer" className="hover:text-white">Disclaimer</Link>
           </nav>
         </div>
       </div>

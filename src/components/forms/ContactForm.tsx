@@ -126,7 +126,7 @@ export function ContactForm() {
             <FieldErrorText error={errors.onSiteNeed} />
           </div>
           <div>
-            <Label htmlFor="contact-remote">Remote support</Label>
+            <Label htmlFor="contact-remote">Distance support</Label>
             <select id="contact-remote" className={controlClass} defaultValue="" {...form.register("remoteNeed")}>
               <option value="" disabled>Select</option>
               {deliveryNeeds.map((option) => (

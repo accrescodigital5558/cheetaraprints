@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
   "Request an Assessment",
-  "Request a customized annual quote for on-site and remote managed print services from Cheetara Prints.",
+  "Request a customized annual quote for managed print services from Cheetara Prints.",
   "/request-assessment",
 );
 

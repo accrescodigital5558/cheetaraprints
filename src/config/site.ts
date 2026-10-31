@@ -1,13 +1,28 @@
+function publishedEmail(raw: string) {
+  const value = raw.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return "";
+  return value;
+}
+
+function publishedPhone(raw: string) {
+  const value = raw.trim();
+  const digits = value.replace(/\D/g, "");
+  if (digits.length < 10) return "";
+  return value;
+}
+
 export const site = {
   name: "Cheetara Prints",
   legalName: "CHEETARA PRINTS, LLC",
   domain: "cheetaraprints.com",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://cheetaraprints.com",
   description:
-    "On-site and remote managed print services for businesses. One annual payment covers a full year of fleet oversight, support, and a customized agreement.",
+    "Managed print services for businesses. A 12-month agreement with one annual invoice for fleet oversight, supplies planning, and technical support.",
   positioning: "Your Printers. Our Responsibility.",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
-  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "",
+  email: publishedEmail(process.env.NEXT_PUBLIC_CONTACT_EMAIL || ""),
+  phone: publishedPhone(process.env.NEXT_PUBLIC_CONTACT_PHONE || ""),
+  logo: "/images/cheetara-logo.png",
+  icon: "/images/cheetara-favicon.png",
   dosId: "7335690",
   filingDate: "May 23, 2024",
   county: "Kings",

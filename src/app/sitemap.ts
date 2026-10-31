@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy-policy",
     "/terms-of-service",
     "/cookie-policy",
+    "/disclaimer",
     ...services.map((service) => service.href),
     ...solutions.map((solution) => solution.href),
     ...industries.map((industry) => industry.href),

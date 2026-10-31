@@ -20,19 +20,19 @@ const heroLines = [
 ];
 
 const facts = [
-  { label: "Delivery", value: "On-site and remote", icon: MapPinned },
-  { label: "Remote", value: "Where the device allows", icon: Monitor },
+  { label: "Service", value: "Managed print", icon: Monitor },
+  { label: "Coverage", value: "On-site and remote as agreed", icon: MapPinned },
   { label: "Annual", value: "One invoice each year", icon: CalendarRange },
   { label: "Named", value: "A service owner", icon: UserRound },
 ];
 
 const agreement = [
-  ["01", "Remote support", "Troubleshooting, configuration, and connectivity follow the hours in the agreement. A window is the time to begin, not a guarantee that the device is repaired."],
-  ["02", "On-site visits, where the agreement includes them", "Assessment, installation, maintenance, and physical repair are scheduled only for the locations and tasks the agreement names."],
-  ["03", "Fleet oversight and reporting", "Usage comes from meters where a device can be read, and from figures you supply where it cannot."],
-  ["04", "Supplies, where fulfillment is included", "Monitoring and replenishment planning are in scope. Shipment is included only when the agreement names the supplier, coverage, and delivery duty."],
-  ["05", "A named service owner", "One person is accountable when a device stops, instead of a queue with no owner."],
-  ["06", "Maintenance and physical repair scope", "Parts, hardware replacement, and hands-on repair are included only when the agreement names them."],
+  ["01", "Managed print operations", "Fleet oversight, supplies planning, reporting, and a named owner for the printers the business already uses."],
+  ["02", "Technical support under the agreement", "Troubleshooting, configuration, and connectivity follow the hours in the agreement. A window is the time to begin, not a guarantee that the device is repaired."],
+  ["03", "On-site visits, where the agreement includes them", "Assessment, installation, maintenance, and physical repair are scheduled only for the locations and tasks the agreement names."],
+  ["04", "Fleet oversight and reporting", "Usage comes from meters where a device can be read, and from figures you supply where it cannot."],
+  ["05", "Supplies, where fulfillment is included", "Monitoring and replenishment planning are in scope. Shipment is included only when the agreement names the supplier, coverage, and delivery duty."],
+  ["06", "A named service owner", "One person is accountable when a device stops, instead of a queue with no owner."],
 ];
 
 const steps = [
@@ -67,7 +67,7 @@ export function HomePage() {
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1180px] flex-col justify-end px-4 pb-16 pt-36 sm:px-5 sm:pb-20 sm:pt-40 lg:pb-36">
           <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white/75 sm:text-[11px] sm:tracking-[0.2em]">
             <span className="size-1.5 shrink-0 rotate-45 bg-green" aria-hidden="true" />
-            On-site and remote managed print
+            Managed print services
           </p>
           <h1 className="mt-4 max-w-full text-[clamp(1.75rem,4.5vw,4.15rem)] leading-[0.94] tracking-[-0.045em] text-white">
             {heroLines.map((line, lineIndex) => (
@@ -86,7 +86,7 @@ export function HomePage() {
             ))}
           </h1>
           <p className="fade-up mt-5 max-w-[34rem] text-[15px] leading-6 text-white/80 sm:mt-6 sm:text-[17px] sm:leading-7" style={{ animationDelay: "900ms" }}>
-            Cheetara Prints helps businesses manage their printer fleets, print infrastructure, supplies, and technical support through coordinated on-site and remote services.
+            Cheetara Prints provides managed print services: fleet oversight, supplies planning, infrastructure, and technical support under a 12-month agreement with one annual invoice.
           </p>
           <div className="fade-up mt-7 flex flex-col items-start gap-3 min-[420px]:flex-row min-[420px]:flex-wrap sm:mt-8" style={{ animationDelay: "1040ms" }}>
             <Pill href="/request-assessment" tone="onDark" event="quote_cta_click" eventParams={{ location: "hero" }}>
@@ -121,7 +121,7 @@ export function HomePage() {
         <Reveal>
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">The fleet</p>
           <h2 className="mt-4 max-w-[14ch] text-[36px] leading-[1.02] tracking-[-0.035em] lg:text-[48px]">Tell us what the fleet is doing.</h2>
-          <p className="mt-4 max-w-xl text-[17px] leading-7 text-muted">Choose the problem closest to yours. Some faults are handled remotely. Others need a visit when the agreement includes one.</p>
+          <p className="mt-4 max-w-xl text-[17px] leading-7 text-muted">Choose the problem closest to yours. Managed print covers the fleet. Some faults are handled from a distance. Others need a visit when the agreement includes one.</p>
         </Reveal>
         <div className="mt-10">
           <ProblemPicker />
@@ -225,14 +225,14 @@ export function HomePage() {
         <div className="mx-auto grid max-w-[1180px] items-center gap-10 px-5 py-24 lg:grid-cols-[1fr_0.9fr] lg:py-32">
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-green">Coverage</p>
-            <h2 className="mt-4 max-w-[14ch] text-[36px] leading-[1.02] tracking-[-0.035em] lg:text-[48px]">On-site and remote service.</h2>
+            <h2 className="mt-4 max-w-[14ch] text-[36px] leading-[1.02] tracking-[-0.035em] lg:text-[48px]">Managed print, delivered as agreed.</h2>
             <p className="mt-5 max-w-xl text-[17px] leading-7 text-white/75">
-              Remote support and on-site visits are coordinated for the locations named in the agreement. This site does not publish an on-site territory or a response time.
+              Support from a distance and on-site visits are coordinated for the locations named in the agreement. This site does not publish an on-site territory or a response time.
             </p>
             <ul className="mt-8 space-y-3 text-[16px] text-white/80">
-              <li>Remote troubleshooting, configuration, and readings where the device allows them.</li>
+              <li>Fleet oversight, reporting, and a named owner for the account.</li>
+              <li>Troubleshooting, configuration, and readings where the device allows them.</li>
               <li>On-site assessment, installation, and physical work when the agreement includes them.</li>
-              <li>One owner for the account, regardless of how many offices are in scope.</li>
             </ul>
           </div>
           <div className="relative h-80 overflow-hidden rounded-[26px]">
@@ -254,7 +254,7 @@ export function HomePage() {
       <section className="bg-paper">
         <div className="mx-auto flex max-w-[1180px] flex-col items-start gap-6 px-5 py-24 lg:py-28">
           <h2 className="max-w-[14ch] text-[36px] leading-[1.02] tracking-[-0.035em] lg:text-[52px]">Let&apos;s Build Your Custom Annual Agreement.</h2>
-          <p className="max-w-xl text-[18px] leading-7 text-muted">On-site and remote managed print, priced for the fleet, the locations, and the services you select.</p>
+          <p className="max-w-xl text-[18px] leading-7 text-muted">Managed print, priced for the fleet, the locations, and the services you select.</p>
           <Pill href="/request-assessment" event="quote_cta_click" eventParams={{ location: "closing" }}>
             Get an Annual Quote
           </Pill>

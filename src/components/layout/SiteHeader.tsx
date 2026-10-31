@@ -156,12 +156,12 @@ export function SiteHeader() {
           onClick={() => closeMobile(true)}
         />
       ) : null}
-      <header className={`fixed inset-x-0 top-0 z-40 overflow-visible transition-colors duration-300 ${solid ? "border-b border-line bg-paper" : "bg-transparent"}`}>
-        <div className={`grid motion-safe:transition-[grid-template-rows,opacity] motion-safe:duration-300 ${scrolled ? "pointer-events-none grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100"}`} aria-hidden={scrolled} inert={scrolled}>
+      <header className={`fixed inset-x-0 top-0 z-[100] isolate overflow-visible transition-[background-color,border-color,box-shadow] duration-300 ${solid ? "border-b border-line bg-paper shadow-[0_8px_24px_rgba(16,36,58,0.06)]" : "border-b border-transparent bg-transparent"}`}>
+        <div className={`grid motion-safe:transition-[grid-template-rows,opacity] motion-safe:duration-300 ${scrolled ? "pointer-events-none grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100"}`} aria-hidden={scrolled} {...(scrolled ? { inert: true } : {})}>
           <div className="overflow-hidden">
             <div className={`border-b ${solid ? "border-line text-muted" : "border-white/15 text-white/80"}`}>
               <div className="mx-auto flex h-9 max-w-[1180px] items-center justify-between px-5 font-mono text-[10px] uppercase tracking-[0.16em]">
-                <p>On-site and remote service · One annual invoice</p>
+                <p>Managed print services · One annual invoice</p>
                 <Link href={quoteCta.href} className="hidden sm:inline" tabIndex={scrolled ? -1 : undefined}>
                   Request an assessment
                 </Link>
@@ -169,10 +169,10 @@ export function SiteHeader() {
             </div>
           </div>
         </div>
-        <div className="relative mx-auto max-w-[1180px] px-5">
-          <div className="flex h-[4.5rem] items-stretch justify-between gap-4">
-          <div className="flex items-center"><Wordmark tone={tone} /></div>
-          <nav id="desktop-navigation" className="hidden h-full items-stretch gap-3 xl:gap-5 lg:flex" aria-label="Primary">
+        <div className="relative z-50 mx-auto max-w-[1180px] overflow-visible px-5">
+          <div className="flex h-[4.5rem] items-stretch justify-between gap-3 xl:gap-4">
+          <div className="flex shrink-0 items-center"><Wordmark tone={tone} /></div>
+          <nav id="desktop-navigation" className="z-50 hidden h-full min-w-0 flex-1 items-stretch justify-end gap-2 xl:gap-5 lg:flex" aria-label="Primary">
             {primaryNav.map((entry) => {
               if (entry.kind === "link") {
                 const active = pageIsCurrent(pathname, entry.href);
@@ -188,7 +188,7 @@ export function SiteHeader() {
               return (
                 <div
                   key={entry.id}
-                  className="flex items-center"
+                  className="flex h-full items-center"
                   onMouseEnter={() => {
                     cancelMenuClose();
                     setOpenMenu((current) => (current?.pinned && current.id === entry.id && current.path === pathname ? current : { id: entry.id, path: pathname, pinned: false }));
@@ -216,7 +216,7 @@ export function SiteHeader() {
                     <span className={`nav-underline ${active || open ? "is-current" : ""}`}>{entry.label}</span>
                     <ChevronDown className={`size-3.5 motion-safe:transition-transform motion-safe:duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
                   </button>
-                  <div id={`nav-${entry.id}-panel`} className={`absolute left-0 right-0 top-full z-50 ${open ? "block" : "hidden"}`} onMouseEnter={cancelMenuClose}>
+                  <div id={`nav-${entry.id}-panel`} className={`absolute left-0 right-0 top-full z-[60] ${open ? "block" : "hidden"}`} onMouseEnter={cancelMenuClose} onMouseLeave={() => scheduleMenuClose(entry.id)}>
                     <div className="pt-3" onKeyDown={(event) => onDesktopMenuKeyDown(event, entry.id, () => setOpenMenu(null))}>
                       <div className="flex max-h-[min(70vh,40rem)] gap-2 overflow-y-auto rounded-[28px] border border-line bg-paper p-2 text-ink shadow-[0_24px_60px_rgba(16,36,58,0.12)]">
                         <ul className="grid flex-1 grid-cols-2 content-stretch gap-1 self-stretch">

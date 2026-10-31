@@ -28,14 +28,19 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "On-Site and Remote Managed Print",
+    default: "Managed Print Services",
     template: "%s | Cheetara Prints",
   },
   description: site.description,
+  icons: {
+    icon: site.icon,
+    apple: site.icon,
+  },
   openGraph: {
     type: "website",
     siteName: site.name,
     locale: "en_US",
+    images: [{ url: site.logo, alt: site.name }],
   },
 };
 
@@ -50,6 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Organization",
               name: site.legalName,
               url: site.url,
+              logo: `${site.url}${site.logo}`,
+              image: `${site.url}${site.logo}`,
               description: site.description,
               areaServed: "US",
             },
