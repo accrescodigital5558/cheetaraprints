@@ -69,6 +69,11 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1180px] flex-col gap-4 px-5 py-5 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>{site.legalName}</p>
+          {site.phone ? (
+            <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading text-[18px] tracking-[-0.03em] text-white hover:text-green">
+              {site.phone}
+            </TrackedLink>
+          ) : null}
           <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">
             <Link href="/privacy-policy" className="hover:text-white">Privacy</Link>
             <Link href="/terms-of-service" className="hover:text-white">Terms</Link>

@@ -53,11 +53,15 @@ export default function ManagedPrintAdsPage() {
               CHEETARA PRINTS, LLC manages the fleet, plans supplies, and owns the ticket. Count first. Then we quote the year.
             </p>
             {site.phone ? (
-              <p className="mt-5">
-                <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading text-[22px] tracking-[-0.03em] text-white sm:text-[26px]">
-                  {site.phone}
-                </TrackedLink>
-              </p>
+              <TrackedLink
+                href={telHref(site.phone)}
+                event="phone_click"
+                external
+                className="mt-5 inline-flex flex-col rounded-2xl border border-white/20 bg-white/10 px-5 py-4"
+              >
+                <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-green">Call</span>
+                <span className="mt-1 font-heading text-[22px] tracking-[-0.03em] text-white sm:text-[28px]">{site.phone}</span>
+              </TrackedLink>
             ) : null}
             <ul className="mt-6 space-y-2 text-[15px] leading-6 text-white/85">
               <li>Inventory first — then an annual figure</li>
@@ -74,6 +78,14 @@ export default function ManagedPrintAdsPage() {
             <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">Request a quote</p>
             <h2 className="mt-2 font-heading text-[22px] leading-[1.15] tracking-[-0.03em]">Tell us about the fleet.</h2>
             <p className="mt-2 text-[14px] leading-6 text-muted">Three short steps. This is a request, not an accepted offer.</p>
+            {site.phone ? (
+              <p className="mt-3 text-[15px] leading-6 text-ink">
+                Or call{" "}
+                <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading underline decoration-green underline-offset-4">
+                  {site.phone}
+                </TrackedLink>
+              </p>
+            ) : null}
             <div className="mt-5">
               <Suspense fallback={<p className="text-muted">Loading the form.</p>}>
                 <AssessmentForm variant="lp" presetService="Managed Print Services" />
@@ -81,6 +93,16 @@ export default function ManagedPrintAdsPage() {
             </div>
           </div>
         </div>
+        {site.phone ? (
+          <div className="relative border-t border-white/15 bg-navy/85">
+            <div className="mx-auto flex max-w-[1180px] flex-col gap-2 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-white/70">Direct line · Tap to call</p>
+              <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading text-[22px] tracking-[-0.03em] text-white sm:text-[24px]">
+                {site.phone}
+              </TrackedLink>
+            </div>
+          </div>
+        ) : null}
       </section>
 
       <section className="mx-auto max-w-[1180px] px-5 py-16 lg:py-20">
