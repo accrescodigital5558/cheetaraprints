@@ -1,6 +1,7 @@
 import { PageHero } from "@/components/services/PageHero";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { site } from "@/config/site";
+import { TrackedLink } from "@/components/ui/TrackedLink";
+import { site, telHref } from "@/config/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
@@ -33,6 +34,15 @@ export default function AboutPage() {
         <p>
           The Cheetara Prints logo and mark on this site identify {site.legalName}.
         </p>
+        {site.phone ? (
+          <p>
+            Call{" "}
+            <TrackedLink href={telHref(site.phone)} event="phone_click" external className="text-ink underline decoration-green underline-offset-4">
+              {site.phone}
+            </TrackedLink>
+            {" "}for managed print questions. A written quote still starts on the assessment form.
+          </p>
+        ) : null}
       </article>
     </>
   );

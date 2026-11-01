@@ -121,7 +121,7 @@ export function AssessmentForm({ presetService, variant = "full" }: Props) {
 
   if (success) {
     return (
-      <div className="rounded-[26px] border border-line bg-paper p-8">
+      <div className={compact ? "" : "rounded-[26px] border border-line bg-paper p-8"}>
         <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-green">Request received</p>
         <h2 className="mt-3 font-heading text-3xl tracking-[-0.03em]">Your assessment request is in.</h2>
         <p className="mt-4 text-[17px] leading-7 text-muted">

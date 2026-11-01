@@ -39,7 +39,11 @@ export default function TermsPage() {
           The website is an informational and inquiry tool. It is provided without a warranty that a particular device can be monitored or repaired. Limits on liability for paid services belong in the service agreement, not in a web form.
         </p>
         <h2>Contact</h2>
-        <p>Questions about these terms can be sent through the contact form{site.email ? ` or to ${site.email}` : ""}.</p>
+        <p>
+          Questions about these terms can be sent through the contact form
+          {site.email ? ` or to ${site.email}` : ""}
+          {site.phone ? `, or by telephone at ${site.phone}` : ""}.
+        </p>
       </Prose>
     </>
   );

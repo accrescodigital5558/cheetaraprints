@@ -11,7 +11,7 @@ export const metadata = pageMetadata(
 );
 
 export default function PrivacyPage() {
-  const contact = site.email || "the contact form on this website";
+  const contact = [site.email, site.phone].filter(Boolean).join(" or ") || "the contact form on this website";
   return (
     <>
       <PageHero
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         </p>
         <h2>Processors</h2>
         <p>
-          Transactional email is sent through Resend when a Resend API key and from-address are configured. Optional audience measurement uses Google Analytics 4 only when a measurement ID is present. Hosting may process technical logs needed to run the site.
+          Transactional email is sent through Resend when a Resend API key and from-address are configured. Audience measurement uses Google Analytics 4 (measurement ID {site.gaMeasurementId}) and Microsoft Clarity (project {site.clarityId}). Hosting may process technical logs needed to run the site.
         </p>
         <h2>Retention</h2>
         <p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         </p>
         <h2>Cookies and analytics</h2>
         <p>
-          If Google Analytics is enabled, it may set cookies to measure page visits and the events listed in the cookie policy. If it is not enabled, the site does not set analytics cookies. The site does not run advertising pixels of its own. See the cookie policy for details.
+          Google Analytics 4 and Microsoft Clarity set cookies and similar storage to measure page visits, events listed in the cookie policy, and session recordings. The site does not run advertising pixels of its own. See the cookie policy for details.
         </p>
         <h2>Security</h2>
         <p>Forms are submitted over HTTPS in production, validated on the server, and rate-limited per server instance. The site does not claim a security certification.</p>

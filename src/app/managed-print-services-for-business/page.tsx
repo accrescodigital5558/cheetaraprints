@@ -40,31 +40,45 @@ const gallery = [
 export default function ManagedPrintAdsPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-navy text-white">
+      <section id="quote" className="relative scroll-mt-28 overflow-hidden bg-navy text-white">
         <Image src="/images/printer-detail.jpg" alt="" fill priority sizes="100vw" className="object-cover object-[70%_center]" />
-        <div className="absolute inset-0 bg-navy/70" />
-        <div className="relative mx-auto max-w-[1180px] px-5 pb-10 pt-28 sm:pb-12 sm:pt-32 lg:pt-36">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-green">Managed print for business</p>
-          <h1 className="mt-3 max-w-[18ch] text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.05] tracking-[-0.04em]">
-            One annual agreement for the printers you already run.
-          </h1>
-          <p className="mt-3 max-w-xl text-[16px] leading-7 text-white/80">
-            CHEETARA PRINTS, LLC manages the fleet, plans supplies, and owns the ticket. Count first. Then we quote the year.
-          </p>
-          {site.phone ? (
-            <p className="mt-4">
-              <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading text-[22px] tracking-[-0.03em] text-white">
-                {site.phone}
-              </TrackedLink>
+        <div className="absolute inset-0 bg-navy/75" />
+        <div className="relative mx-auto grid max-w-[1180px] items-start gap-10 px-5 pb-12 pt-28 sm:pb-16 sm:pt-32 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,26.5rem)] lg:pt-36">
+          <div>
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-green">Managed print for business</p>
+            <h1 className="mt-3 max-w-[16ch] text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.05] tracking-[-0.04em]">
+              One annual agreement for the printers you already run.
+            </h1>
+            <p className="mt-3 max-w-xl text-[16px] leading-7 text-white/80">
+              CHEETARA PRINTS, LLC manages the fleet, plans supplies, and owns the ticket. Count first. Then we quote the year.
             </p>
-          ) : null}
-          <div className="mt-5 flex flex-wrap gap-3">
-            <Pill href="#quote" tone="onDark" event="quote_cta_click" eventParams={{ location: "ads-hero" }}>
-              Request a quote
-            </Pill>
-            <Pill href="/services/managed-print-services" variant="ghost" tone="onDark" event="service_view" eventParams={{ location: "ads-hero" }}>
-              What is included
-            </Pill>
+            {site.phone ? (
+              <p className="mt-5">
+                <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading text-[22px] tracking-[-0.03em] text-white sm:text-[26px]">
+                  {site.phone}
+                </TrackedLink>
+              </p>
+            ) : null}
+            <ul className="mt-6 space-y-2 text-[15px] leading-6 text-white/85">
+              <li>Inventory first — then an annual figure</li>
+              <li>Supplies planned to real meters</li>
+              <li>A named owner when a device stops</li>
+            </ul>
+            <div className="mt-6">
+              <Pill href="#included" variant="ghost" tone="onDark" event="service_view" eventParams={{ location: "ads-hero" }}>
+                What is included
+              </Pill>
+            </div>
+          </div>
+          <div className="rounded-[26px] border border-white/10 bg-paper p-5 text-ink shadow-[0_24px_60px_rgba(16,36,58,0.28)] sm:p-7">
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">Request a quote</p>
+            <h2 className="mt-2 font-heading text-[22px] leading-[1.15] tracking-[-0.03em]">Tell us about the fleet.</h2>
+            <p className="mt-2 text-[14px] leading-6 text-muted">Three short steps. This is a request, not an accepted offer.</p>
+            <div className="mt-5">
+              <Suspense fallback={<p className="text-muted">Loading the form.</p>}>
+                <AssessmentForm variant="lp" presetService="Managed Print Services" />
+              </Suspense>
+            </div>
           </div>
         </div>
       </section>
@@ -89,7 +103,7 @@ export default function ManagedPrintAdsPage() {
         </div>
       </section>
 
-      <section className="bg-paper">
+      <section id="included" className="scroll-mt-28 bg-paper">
         <div className="mx-auto max-w-[1180px] px-5 py-16 lg:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div className="order-2 lg:order-1">
@@ -159,26 +173,28 @@ export default function ManagedPrintAdsPage() {
         </div>
       </section>
 
-      <section id="quote" className="scroll-mt-28 bg-paper">
-        <div className="mx-auto grid max-w-[1180px] items-start gap-10 px-5 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:py-20">
+      <section className="scroll-mt-28 bg-paper">
+        <div className="mx-auto flex max-w-[1180px] flex-col items-start gap-5 px-5 py-16 sm:flex-row sm:items-center sm:justify-between lg:py-20">
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Annual quote</p>
-            <h2 className="mt-3 font-heading text-[32px] tracking-[-0.035em]">Tell us about the fleet.</h2>
-            <p className="mt-4 text-[16px] leading-7 text-muted">
-              Three short steps. No brand list. The quote is customized after we count devices. This is a request, not an accepted offer.
-            </p>
-            <p className="mt-6 text-[14px] leading-6 text-muted">
-              Advertiser: {site.legalName}. See the{" "}
+            <h2 className="mt-3 font-heading text-[32px] tracking-[-0.035em]">Prefer to send it from here?</h2>
+            <p className="mt-3 max-w-xl text-[16px] leading-7 text-muted">
+              The form is at the top of this page. The quote is customized after we count devices. Advertiser: {site.legalName}. See the{" "}
               <Link href="/disclaimer" className="underline decoration-green underline-offset-4">
                 disclaimer
               </Link>
               .
             </p>
           </div>
-          <div className="rounded-[26px] border border-line bg-ground p-6 sm:p-8">
-            <Suspense fallback={<p className="text-muted">Loading the form.</p>}>
-              <AssessmentForm variant="lp" presetService="Managed Print Services" />
-            </Suspense>
+          <div className="flex flex-wrap items-center gap-3">
+            <Pill href="#quote" event="quote_cta_click" eventParams={{ location: "ads-bottom" }}>
+              Back to the form
+            </Pill>
+            {site.phone ? (
+              <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading text-[20px] tracking-[-0.03em] text-navy">
+                {site.phone}
+              </TrackedLink>
+            ) : null}
           </div>
         </div>
       </section>

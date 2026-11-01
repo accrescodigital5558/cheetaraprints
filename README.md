@@ -21,17 +21,15 @@ Quote and contact forms validate on the server. They send mail only when all of 
 
 If any are missing, the form reports that the request was not sent. In development, a validated payload may also be appended to `.data/leads.json`. That file is local inspection only.
 
-Optional public contact details:
+Public contact and analytics (overridable; production defaults live in `src/config/site.ts`):
 
 - `NEXT_PUBLIC_CONTACT_EMAIL`
-- `NEXT_PUBLIC_CONTACT_PHONE`
+- `NEXT_PUBLIC_CONTACT_PHONE` (`+1 209 991 4100`)
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` (`G-YYYS7XZ9EF`)
+- `NEXT_PUBLIC_CLARITY_ID` (`z6eqcojyhq`)
 
-Leave them empty until the business confirms them. The site does not invent an address or telephone number.
-
-Optional analytics:
-
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+Leave the email empty until the business confirms an inbox. The site does not invent a street address.
 
 ## Notes
 
-New York Department of State details shown on the About page were supplied for the project and should be verified before production publication. Public email and phone are shown only when they look like real contact details (a valid email, and a phone with at least ten digits). Placeholder values such as `123` / `2334` are hidden.
+New York Department of State details shown on the About page were supplied for the project and should be verified before production publication. Public email is shown only when it looks like a real address. Placeholder values such as `123` / `2334` are hidden.

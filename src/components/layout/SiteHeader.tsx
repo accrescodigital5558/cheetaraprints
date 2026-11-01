@@ -8,8 +8,10 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { Wordmark } from "@/components/brand/Wordmark";
 import { Pill } from "@/components/ui/Pill";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { easeOut } from "@/lib/animations";
 import { track } from "@/lib/analytics";
+import { site, telHref } from "@/config/site";
 import { menuIsCurrent, pageIsCurrent, primaryNav, quoteCta, type NavMenu } from "@/config/navigation";
 
 type OpenMenu = { id: NavMenu["id"]; path: string; pinned: boolean };
@@ -160,11 +162,18 @@ export function SiteHeader() {
         <div className={`grid motion-safe:transition-[grid-template-rows,opacity] motion-safe:duration-300 ${scrolled ? "pointer-events-none grid-rows-[0fr] opacity-0" : "grid-rows-[1fr] opacity-100"}`} aria-hidden={scrolled} {...(scrolled ? { inert: true } : {})}>
           <div className="overflow-hidden">
             <div className={`border-b ${solid ? "border-line text-muted" : "border-white/15 text-white/80"}`}>
-              <div className="mx-auto flex h-9 max-w-[1180px] items-center justify-between px-5 font-mono text-[10px] uppercase tracking-[0.16em]">
+              <div className="mx-auto flex h-9 max-w-[1180px] items-center justify-between gap-4 px-5 font-mono text-[10px] uppercase tracking-[0.16em]">
                 <p>Managed print services · One annual invoice</p>
-                <Link href={quoteCta.href} className="hidden sm:inline" tabIndex={scrolled ? -1 : undefined}>
-                  Request an assessment
-                </Link>
+                <div className="flex items-center gap-4">
+                  {site.phone ? (
+                    <TrackedLink href={telHref(site.phone)} event="phone_click" external className="hidden sm:inline" tabIndex={scrolled ? -1 : undefined}>
+                      {site.phone}
+                    </TrackedLink>
+                  ) : null}
+                  <Link href={quoteCta.href} className="hidden sm:inline" tabIndex={scrolled ? -1 : undefined}>
+                    Request an assessment
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -279,6 +288,16 @@ export function SiteHeader() {
             })}
           </nav>
           <div className="flex items-center gap-3">
+            {site.phone ? (
+              <TrackedLink
+                href={telHref(site.phone)}
+                event="phone_click"
+                external
+                className={`hidden whitespace-nowrap text-[13px] font-medium xl:inline ${solid ? "text-ink" : "text-white"}`}
+              >
+                {site.phone}
+              </TrackedLink>
+            ) : null}
             <div className="hidden sm:block">
               <Pill href={quoteCta.href} event="quote_cta_click" eventParams={{ location: "header" }}>
                 {quoteCta.label}
@@ -370,6 +389,18 @@ export function SiteHeader() {
                 <Pill href={quoteCta.href} event="quote_cta_click" eventParams={{ location: "mobile-menu" }}>
                   {quoteCta.label}
                 </Pill>
+                {site.phone ? (
+                  <a
+                    href={telHref(site.phone)}
+                    className="mt-3 block rounded-2xl px-3 py-3 text-lg font-medium text-ink"
+                    onClick={() => {
+                      track("phone_click");
+                      closeMobile();
+                    }}
+                  >
+                    {site.phone}
+                  </a>
+                ) : null}
               </div>
             </motion.nav>
           ) : null}

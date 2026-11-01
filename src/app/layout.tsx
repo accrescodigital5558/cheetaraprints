@@ -59,6 +59,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               image: `${site.url}${site.logo}`,
               description: site.description,
               areaServed: "US",
+              ...(site.phone
+                ? {
+                    telephone: site.phone,
+                    contactPoint: {
+                      "@type": "ContactPoint",
+                      telephone: site.phone,
+                      contactType: "customer service",
+                    },
+                  }
+                : {}),
             },
             {
               "@context": "https://schema.org",

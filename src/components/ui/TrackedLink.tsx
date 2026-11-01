@@ -9,16 +9,17 @@ type Props = {
   className?: string;
   event?: string;
   external?: boolean;
+  tabIndex?: number;
 };
 
-export function TrackedLink({ href, children, className, event, external }: Props) {
+export function TrackedLink({ href, children, className, event, external, tabIndex }: Props) {
   const onClick = () => {
     if (event) track(event);
   };
 
   if (external) {
     return (
-      <a href={href} className={className} onClick={onClick}>
+      <a href={href} className={className} onClick={onClick} tabIndex={tabIndex}>
         {children}
       </a>
     );

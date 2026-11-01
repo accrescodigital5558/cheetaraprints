@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { CalendarRange, MapPinned, Monitor, UserRound } from "lucide-react";
 import { Pill } from "@/components/ui/Pill";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { Reveal } from "@/components/ui/Reveal";
 import { FaqList } from "@/components/ui/FaqList";
 import { ProblemPicker } from "@/components/sections/ProblemPicker";
+import { site, telHref } from "@/config/site";
 import { faqs } from "@/data/faq";
 import { services } from "@/data/services";
 
@@ -96,6 +98,13 @@ export function HomePage() {
               Explore Our Services
             </Pill>
           </div>
+          {site.phone ? (
+            <p className="fade-up mt-5" style={{ animationDelay: "1100ms" }}>
+              <TrackedLink href={telHref(site.phone)} event="phone_click" external className="font-heading text-[22px] tracking-[-0.03em] text-white">
+                {site.phone}
+              </TrackedLink>
+            </p>
+          ) : null}
         </div>
       </section>
 
